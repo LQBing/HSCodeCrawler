@@ -22,7 +22,7 @@ session = DBSession()
 
 class Chapter(BaseModel):
     __tablename__ = 'chapter'  # 表名
-    id = Column(CHAR(10), primary_key=True)
+    id = Column(TEXT(), primary_key=True)
     name = Column(TEXT())
     url = Column(TEXT())
 
@@ -32,16 +32,16 @@ class HSCode(BaseModel):
     id = Column(CHAR(20), primary_key=True)  # 商品编码
     name = Column(TEXT())  # 商品名称
     declare_elements = Column(TEXT())  # 申报要素
-    statutory_first_unit_name = Column(CHAR(10))  # 法定第一单位
-    statutory_second_unit_name = Column(CHAR(10))  # 法定第二单位
-    mfn_rate = Column(CHAR(5))  # 最惠国( %)
-    import_rate = Column(CHAR(5))  # 进口普通( %)
-    export_ad_valorem_tariff_rate = Column(CHAR(5))  # 出口从价关税率
-    vat_rate = Column(CHAR(5))  # 增值税率
-    rebate_rate = Column(CHAR(5))  # 退税率( %)
-    consumption_tax_rate = Column(CHAR(5))  # 消费税率
-    customs_supervision_conditions = Column(CHAR(10))  # 海关监管条件
-    inspection_and_quarantine = Column(CHAR(10))  # 检验检疫
+    statutory_first_unit_name = Column(TEXT())  # 法定第一单位
+    statutory_second_unit_name = Column(TEXT())  # 法定第二单位
+    mfn_rate = Column(TEXT())  # 最惠国( %)
+    import_rate = Column(TEXT())  # 进口普通( %)
+    export_ad_valorem_tariff_rate = Column(TEXT())  # 出口从价关税率
+    vat_rate = Column(TEXT())  # 增值税率
+    rebate_rate = Column(TEXT())  # 退税率( %)
+    consumption_tax_rate = Column(TEXT())  # 消费税率
+    customs_supervision_conditions = Column(TEXT())  # 海关监管条件
+    inspection_and_quarantine = Column(TEXT())  # 检验检疫
     product_description = Column(TEXT())  # 商品描述
     en_name = Column(TEXT())  # 英文名称
     tax_number = Column(TEXT())  # 个人行邮(税号)
